@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Dropdown</title>
+
+<style> 
+body { 
+    height: auto; 
+    margin: 0%;
+ } 
+header h1 { 
+    background-color: red; 
+    text-align: center;
+    margin: 0%; 
+ } 
+
+    #navigate { 
+        position: static; 
+        top: 0%; 
+        z-index: 1; 
+    } 
+
+    .menu{
+        top:0%;
+        background-color: rgb(0, 0,0,0.5 );
+        margin: 0%; 
+    }
+
+    .menu li{
+        display: inline-block;
+        padding: 10px;
+    }
+
+    .menu li a {
+        color: white;
+        font-size: 20px;
+        text-decoration: none;
+    }
+
+    .menu li:hover{
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .menu li:hover #Dropdown_1{
+        display: block;
+    }
+
+    .menu li:hover #Dropdown_2{
+        display: block;
+    }
+
+    #Dropdown_2, #Dropdown_1{
+        top: 11%;
+        position: absolute;
+        width:auto;
+        min-width: 160px;
+        display: none;
+        background-color: whitesmoke;
+        padding: 12px 10px;
+        text-decoration: none;
+        z-index: 1;
+    }
+
+    #Dropdown_2 li, #Dropdown_1 li{
+        display: block;
+    }
+
+    #Dropdown_2 li a, #Dropdown_1 li a{
+        color: steelblue;
+        font-size: 16px;
+    }
+
+    #Dropdown_2 li:hover, #Dropdown_1 li:hover{
+        background-color: gainsboro;
+    }
+</style> 
+</head>
+<body>
+     <header> <h1>Demo of Dropdown</h1></header> 
+     <div> 
+        <nav id="navigate"> 
+            <ul class="menu"> 
+                <li> <a href="#">Link 1</a></li> 
+                <li> <a href="#">Link 2</a>
+                    <ul id="Dropdown_1">
+                        <li><a href="#">DD Link 1</a></li>
+                        <li><a href="#">DD Link 2</a></li>
+                        <li><a href="#">DD Link 3</a></li>
+                    </ul>
+                </li> 
+                <li> <a href="#">Link 3</a>
+                    <ul id="Dropdown_2">
+                        <li><a href="#">DD Link 1</a></li>
+                        <li><a href="#">DD Link 2</a></li>
+                        <li><a href="#">DD Link 3</a></li>
+                    </ul>
+                </li> 
+            </ul> 
+        </nav> 
+    </div> 
+</body> 
+</html>
